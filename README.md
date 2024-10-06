@@ -1,9 +1,9 @@
-  <h1 align="center"><i>NotesTeX</i></h1>
+<h1 align="center"><i>NotesTeX</i></h1>
 
-  <p align="center">
-    <b>An All-In-One LaTeX Notes Package For Students.</b>
+<p align="center">
+    <b>为学生设计的全能 LaTeX 笔记包。</b>
     <br>
-    <i>NotesTeX</i> is a modification of the original Jhep journal <br> format in order to suit the needs of students in university. 
+    <i>NotesTeX</i> 是对原始 Jhep 期刊格式的修改，<br> 以满足大学生的需求。
     <br>
     <br>
     &middot;
@@ -15,76 +15,74 @@
     &middot;
   </p>
 
-</p>
+## 目录
 
-## Table of contents
+- [更新](#update)
+- [预览](#preview)
+- [安装](#installation)
+- [使用](#usage)
+- [文档](#documentation)
+- [许可证](#license)
+- [版本和联系信息](#version-and-contact)
 
-- [Update](#update)
-- [Preview](#preview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [License](#license)
-- [Version and Contact](#version-and-contact) 
+## 更新 (v3.0)
 
-## Update (v3.0)
+**2021年10月23日**
 
-**23/10/2021** 
+1. 样式更新；修复了错误
+2. 修复了边注、旁注与几何包之间的浮动问题
+3. 为 AMSThm 环境集成了左栏
+4. 移除了已弃用的字体和快捷方式
 
-1. Stylistic updates; bug fixes
-2. Fixed floating issues between margin note, side note, and the geometry package
-3. Left column integration for AMSThm environments
-4. Removed deprecated fonts and shortcuts
+## 预览
 
-## Preview
-
-|                    ```Jhep``` Formatting                     |                      Table of Contents                       |
+|                    ```Jhep``` 格式化                     |                      目录                       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [![Preview](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample0.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample0.pdf) | [![Preview](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample1.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample1.pdf) |
+| [![预览](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample0.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample0.pdf) | [![预览](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample1.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample1.pdf) |
 
-|                         Margin Notes                         |                   ```amsthm``` Integration                   |
+|                         边注                         |                   ```amsthm``` 集成                   |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [![Preview](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample2.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample2.pdf) | [![Preview](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample3.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample3.pdf) |
+| [![预览](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample2.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample2.pdf) | [![预览](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample3.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample3.pdf) |
 
-|                      Image Integration                       |                  New ```part``` Formatting                   |
+|                      图片集成                       |                  新的 ```part``` 格式化                   |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [![Preview](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample4.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample4.pdf) | [![Preview](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample5.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample5.pdf) |
+| [![预览](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample4.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample4.pdf) | [![预览](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample5.png)](https://raw.githubusercontent.com/adhumunt/NotesTeX/master/Sample/Sample5.pdf) |
 
-## Installation
+## 安装
 
-Installing just requires the following steps:
+安装只需要以下步骤：
 
-1. **Download** the [zip archive](NotesTeXV3.zip).
-2. **Build** the NotesTeX.tex file. This compile should work without a problem, and it should look like the pdf attached below.
-3. **Move** the NotesTeXV3.sty file where ever you need it, and let your new notes file call to it as provided in the example below.
+1. **下载** [zip 压缩包](NotesTeXV3.zip)。
+2. **编译** NotesTeX.tex 文件。编译应无问题，结果应与下方附带的 PDF 一致。
+3. **移动** NotesTeXV3.sty 文件到你需要的地方，并让你的新笔记文件按照下面的示例调用它。
 
-## Usage
+## 使用
 
-Here is an example of a test page:
+以下是一个测试页面的示例：
 
 ```latex
 \documentclass[10pt]{article}
-\usepackage{/Path/to/package/NotesTeX} %/Path/to/package should be replaced with package location
+\usepackage{/Path/to/package/NotesTeX} %应将 /Path/to/package 替换为包的实际路径
 \usepackage{lipsum}
 
-\title{{\Huge Test Page Title}\\{\Large{Test Page Subtitle}}}
-\author{Author Name\footnote{\href{https://google.com/}{\textit{Author Website}}}}
+\title{{\Huge 测试页面标题}\\{\Large{测试页面副标题}}}
+\author{作者姓名\footnote{\href{https://google.com/}{\textit{作者网站}}}}
 
-\affiliation{Affiliation of Author}
-\emailAdd{Email of Author}
+\affiliation{作者单位}
+\emailAdd{作者邮箱}
 \begin{document}
   \maketitle
   \flushbottom
   \newpage
   \pagestyle{fancynotes}
-  \part{Test Part 1}
+  \part{测试部分 1}
   \lipsum[1]
-  \section{Subtest Section 1}
-  Some notes here.\sn{With some additional sidenotes}
+  \section{子测试章节 1}
+  这里有一些笔记。\sn{还有一些附加的旁注}
 \end{document}
 ```
 
-For right to left flowing languages, please add the following package and your native font just before you start the document. Below is an MWE with [Persian font](https://fontlibrary.org/en/font/xb-niloofar).
+对于从右到左书写的语言，请在开始文档之前添加以下包和你的本地字体。下面是一个使用 [波斯语字体](https://fontlibrary.org/en/font/xb-niloofar) 的最小工作示例（MWE）。
 
 ```latex
 \usepackage{xepersian}
@@ -95,17 +93,17 @@ For right to left flowing languages, please add the following package and your n
  ...
 ```
 
-## Documentation
+## 文档
 
-All the documentation of this package is given in [NotesTeXV3.pdf](NotesTeXV3/NotesTeX.pdf) and if you have any questions feel free to contact me.
+该包的所有文档都在 [NotesTeXV3.pdf](NotesTeXV3/NotesTeX.pdf) 中，如果你有任何问题，请随时联系我。
 
-## License
+## 许可证
 
-This material is subject to the [LaTeX Project Public License](LICENSE).
+此材料受 [LaTeX 项目公共许可证](LICENSE) 约束。
 
-## Version and Contact
+## 版本和联系信息
 
 > NotesTeX v3.0.  
-> Created by Aditya Dhumuntarao.  
-> Date: 23 Oct, 2021.  
-> E-mail comments and suggestions to adhumunt@gmail.com.  
+> 由 Aditya Dhumuntarao 创建。  
+> 日期：2021年10月23日。  
+> 如有意见和建议，请发送邮件至 adhumunt@gmail.com。
